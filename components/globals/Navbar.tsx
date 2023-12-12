@@ -115,7 +115,7 @@ const Navbar = () => {
                         Next.js (Redux)
                       </Link>
                       <nav className="hidden sm:ml-6 sm:flex flex-grow justify-center items-center">
-                        <NavLink href="/blog">Blog</NavLink>
+                        <NavLink href="/chat-gpt">Chat</NavLink>
                         <NavLink href="/shop">Shop</NavLink>
                         <NavLink href="/template">Template</NavLink>
                         <NavLink href="/demo">Demo</NavLink>

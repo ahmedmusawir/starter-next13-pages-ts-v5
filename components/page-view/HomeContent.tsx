@@ -16,7 +16,7 @@ const HomeContent = () => {
     <Container FULL className="">
       {/* <Hero title={title} slogan={slogan} /> */}
       <Hero />
-      <Row>
+      {/* <Row>
         <FeaturedRestaurants />
       </Row>
       <Row>
@@ -24,7 +24,7 @@ const HomeContent = () => {
       </Row>
       <Row>
         <FeaturedCities />
-      </Row>
+      </Row> */}
     </Container>
   );
 };

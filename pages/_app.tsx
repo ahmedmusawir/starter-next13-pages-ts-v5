@@ -8,19 +8,21 @@ import { Provider } from "react-redux";
 import "@/styles/globals.scss";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { Theme } from "@radix-ui/themes";
+import "@radix-ui/themes/styles.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <ThemeProvider>
+        <Theme appearance="dark">
           <ProductProvider>
             <CartProvider>
               <Component {...pageProps} />
               <ToastContainer />
             </CartProvider>
           </ProductProvider>
-        </ThemeProvider>
+        </Theme>
       </PersistGate>
     </Provider>
   );
