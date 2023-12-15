@@ -1,7 +1,5 @@
-import { Container, Hero, Row } from "../ui-ux";
-import FeaturedCities from "../ui-ux/FeaturedCities";
-import FeaturedCuisines from "../ui-ux/FeaturedCuisines";
-import FeaturedRestaurants from "../ui-ux/FeaturedRestaurants";
+import Container from "../ui-ux/common/Container";
+import Hero from "../ui-ux/restaurant/Hero";
 
 interface Props {
   // homePageContent: HomePageData;
@@ -13,18 +11,9 @@ const HomeContent = () => {
   // const slogan = homePageContent?.attributes?.heroSlogan;
 
   return (
-    <Container FULL className="">
+    <Container className="" FULL={true}>
       {/* <Hero title={title} slogan={slogan} /> */}
       <Hero />
-      {/* <Row>
-        <FeaturedRestaurants />
-      </Row>
-      <Row>
-        <FeaturedCuisines />
-      </Row>
-      <Row>
-        <FeaturedCities />
-      </Row> */}
     </Container>
   );
 };

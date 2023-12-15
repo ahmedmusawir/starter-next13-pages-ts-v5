@@ -1,4 +1,4 @@
-import SignupContent from "@/components/page-view/SignupContent";
+import SignupContent from "@/components/page-view/auth/SignupContent";
 import styles from "./signup.module.scss";
 import withoutAuth from "@/hoc/withoutAuth";
 

@@ -1,6 +1,6 @@
-import CheckboxGroupCategories from "../ui-ux/CheckboxGroupCategories";
-import CheckboxGroupPostTags from "../ui-ux/CheckboxGroupPostTags";
-import SwitchButton from "../ui-ux/SwitchButton";
+import CheckboxGroupCategories from "../ui-ux/blog/CheckboxGroupCategories";
+import CheckboxGroupPostTags from "../ui-ux/blog/CheckboxGroupPostTags";
+import SwitchButton from "../ui-ux/common/SwitchButton";
 
 const SidebarForm = () => {
   return (

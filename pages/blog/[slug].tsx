@@ -1,5 +1,5 @@
-import SingleBlogPageContent from "@/components/page-view/SingleBlogPageContent";
-import Spinner from "@/components/ui-ux/Spinner";
+import SingleBlogPageContent from "@/components/page-view/blog/SingleBlogPageContent";
+import Spinner from "@/components/ui-ux/common/Spinner";
 import datasource from "@/data-layer";
 import { PostData } from "@/data-layer/post-entities";
 import { GetStaticPropsContext } from "next";

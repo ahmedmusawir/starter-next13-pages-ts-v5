@@ -1,6 +1,6 @@
 import { Template } from "@/components/page-view";
 import style from "./blog.module.scss";
-import BlogPageContent from "@/components/page-view/BlogPageContent";
+import BlogPageContent from "@/components/page-view/blog/BlogPageContent";
 import { PostApiResponse } from "@/services/postService";
 import datasource from "@/data-layer";
 

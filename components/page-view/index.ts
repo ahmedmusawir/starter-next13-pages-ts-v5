@@ -1,6 +1,6 @@
 export { default as Home } from "./HomeContent";
 export { default as Template } from "./Template";
-export { default as Demo } from "./Demo";
-export { default as ShopContent } from "./ShopContent";
-export { default as ShopSingleContent } from "./ShopSingleContent";
-export { default as CheckoutContent } from "./CheckoutContent";
+export { default as Demo } from "./demo/Demo";
+export { default as ShopContent } from "./ecom/ShopContent";
+export { default as ShopSingleContent } from "./ecom/ShopSingleContent";
+export { default as CheckoutContent } from "./ecom/CheckoutContent";

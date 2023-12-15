@@ -11,7 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
 import { useCart } from "@/contexts/CartContext";
-import LoginModal from "../ui-ux/LoginModal";
+import LoginModal from "../ui-ux/auth/LoginModal";
 import { useDispatch, useSelector } from "react-redux";
 import { ApiError, RootState } from "@/global-interfaces";
 import { openLoginModal, setLogout } from "@/features/auth/authSlice";
@@ -112,10 +112,13 @@ const Navbar = () => {
                         href="/"
                         className="rounded-md bg-gray-900 px-3 py-2 text-lg font-large text-white"
                       >
-                        Next.js (Redux)
+                        Cyberize AI
                       </Link>
                       <nav className="hidden sm:ml-6 sm:flex flex-grow justify-center items-center">
-                        <NavLink href="/chat-gpt">Chat</NavLink>
+                        <NavLink href="/moose-gpt-1">Chat 1</NavLink>
+                        <NavLink href="/moose-gpt-2">Chat 2</NavLink>
+                        <NavLink href="/moose-gpt-3">Chat 3</NavLink>
+                        <NavLink href="/moose-gpt-4">Chat 4</NavLink>
                         <NavLink href="/shop">Shop</NavLink>
                         <NavLink href="/template">Template</NavLink>
                         <NavLink href="/demo">Demo</NavLink>

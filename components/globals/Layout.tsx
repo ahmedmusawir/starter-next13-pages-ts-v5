@@ -11,14 +11,14 @@ function Layout({ children }: LayoutProps) {
 
   return (
     <>
-      <div className="flex flex-col min-h-screen" data-theme={theme}>
+      <div className="flex flex-col h-screen" data-theme={theme}>
         <Navbar />
-        <Main className="flex flex-col">
+        <Main className="flex flex-col flex-grow">
           {children
             ? children
             : "This is a Layout container. Must have children"}
         </Main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

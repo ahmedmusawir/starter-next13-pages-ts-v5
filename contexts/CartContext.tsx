@@ -1,5 +1,5 @@
 import { products } from "@/demo-data/data";
-import Cart from "@/components/ui-ux/Cart";
+import Cart from "@/components/ui-ux/ecom/Cart";
 import { createContext, ReactNode, useContext, useMemo, useState } from "react";
 
 interface Product {

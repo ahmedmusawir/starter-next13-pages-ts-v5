@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "@/components/globals/Layout";
-import { Box, Container, Row } from "@/components/ui-ux";
 import HomeContent from "@/components/page-view/HomeContent";
+import Container from "@/components/ui-ux/common/Container";
 
 export default function Home() {
   return (
