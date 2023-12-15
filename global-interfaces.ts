@@ -21,6 +21,19 @@ export interface AuthState {
   loginModalOpen: boolean;
 }
 
+// For MooseChat bot messages (moose-gpt-1, 2, 3)
+export interface Message {
+  isUser: boolean;
+  text: string;
+}
+
+// For Language Assistant Bot (moose-gpt-translate)
+export interface Language {
+  id: string;
+  title: string;
+  country: string;
+}
+
 export interface FiltersState {
   searchTerm?: string;
   isFeatured?: boolean;

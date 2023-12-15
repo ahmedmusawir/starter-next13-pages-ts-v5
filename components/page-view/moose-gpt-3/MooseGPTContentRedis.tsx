@@ -4,8 +4,8 @@ import { Page } from "../../globals";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import Spinner from "@/components/ui-ux/common/Spinner";
 import useChatSubmit from "@/hooks/useChatSubmit";
-import ChatMessage from "@/components/ui-ux/moose-gpt-2/ChatMessage";
-import UserInputBottom from "@/components/ui-ux/moose-gpt-2/UserInputBottom";
+import ChatMessage from "@/components/ui-ux/moose-gpt-3/ChatMessage";
+import UserInputBottom from "@/components/ui-ux/moose-gpt-3/UserInputBottom";
 
 const MooseGPTContentRedis = () => {
   const { chatMessages, isLoading, submitMessage, setChatMessages } =
