@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
+import { TranslateProvider } from "@/contexts/TranslateContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -18,8 +19,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <Theme appearance="dark">
           <ProductProvider>
             <CartProvider>
-              <Component {...pageProps} />
-              <ToastContainer />
+              <TranslateProvider>
+                <Component {...pageProps} />
+                <ToastContainer />
+              </TranslateProvider>
             </CartProvider>
           </ProductProvider>
         </Theme>

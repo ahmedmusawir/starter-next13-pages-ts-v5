@@ -8,9 +8,8 @@ interface Props {
 
 const ChatMessage = ({ isUser, message }: Props) => {
   // Apply different styles based on the speaker
-  const messageStyles = isUser ? "bg-blue-100" : "bg-white text-left ml-5";
+  const messageStyles = isUser ? "bg-blue-100" : "bg-white ml-5";
   const iconStyles = "justify-start";
-  // const iconStyles = isUser ? "justify-end" : "justify-start";
   const Icon = isUser ? FaUserCircle : FaRobot;
 
   return (

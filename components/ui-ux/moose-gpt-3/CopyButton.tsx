@@ -8,7 +8,7 @@ interface Props {
 const CopyButton = ({ textToCopy }: Props) => {
   const handleCopy = () => {
     navigator.clipboard.writeText(textToCopy).then(() => {
-      alert("Text copied to clipboard");
+      console.info("Text copied to clipboard");
     });
   };
 

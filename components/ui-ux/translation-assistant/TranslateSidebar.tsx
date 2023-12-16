@@ -4,16 +4,9 @@ import TranslateRadioBlock from "./TranslateRadioBlock";
 
 interface Props {
   setChatMessages: React.Dispatch<React.SetStateAction<Message[]>>;
-  languages: Language[];
-  setOutputLang: React.Dispatch<React.SetStateAction<string>>;
-  // selectedLanguage: string;
 }
 
-const TranslateSidebar = ({
-  setChatMessages,
-  languages,
-  setOutputLang,
-}: Props) => {
+const TranslateSidebar = ({ setChatMessages }: Props) => {
   // Function to handle clear messages
   const handleClearMessage = () => {
     setChatMessages([]);
@@ -25,10 +18,7 @@ const TranslateSidebar = ({
           Clear Messages
         </button>
         <section className="mt-10">
-          <TranslateRadioBlock
-            languages={languages}
-            setOutputLang={setOutputLang}
-          />
+          <TranslateRadioBlock />
         </section>
       </div>
     </>

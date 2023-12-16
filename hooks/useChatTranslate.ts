@@ -1,9 +1,5 @@
+import { Message } from "@/global-interfaces";
 import { useState, useEffect } from "react";
-
-interface Message {
-  isUser: boolean;
-  text: string;
-}
 
 const useChatTranslate = (apiEndpoint: string) => {
   const [chatMessages, setChatMessages] = useState<Message[]>([]);

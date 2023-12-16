@@ -1,11 +1,7 @@
+import { Message } from "@/global-interfaces";
 import { useState, useEffect } from "react";
 
-interface Message {
-  isUser: boolean;
-  text: string;
-}
-
-const useChatSubmit = (apiEndpoint: string) => {
+const useChatStreaming = (apiEndpoint: string) => {
   const [chatMessages, setChatMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -53,4 +49,4 @@ const useChatSubmit = (apiEndpoint: string) => {
   return { chatMessages, isLoading, submitMessage, setChatMessages };
 };
 
-export default useChatSubmit;
+export default useChatStreaming;

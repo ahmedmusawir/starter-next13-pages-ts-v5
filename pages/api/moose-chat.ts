@@ -10,13 +10,12 @@ export default async function handler(
   // Create a new instance of the OpenAI model
   const model = new ChatOpenAI({
     temperature: 0.5,
-    modelName: "gpt-3.5-turbo",
-    // modelName: "gpt-4-1106-preview", //[GPT4]
+    modelName: "gpt-3.5-turbo-16k",
+    // modelName: "gpt-4-1106-preview",
     streaming: true,
     callbacks: [
       {
         handleLLMNewToken(token) {
-          //   process.stdout.write(token);
           res.write(token);
         },
       },
@@ -25,7 +24,7 @@ export default async function handler(
 
   await model.call([
     new SystemMessage(
-      "Your are an assistant and your name is Rico. If you don't know something, respond politely that you don't know it, otherwise, try to answer questions as honestly and accurately as possible."
+      "Your are an assistant and your name is Rico. You are ready to answer any question or produce any kind of content when asked."
     ),
 
     new HumanMessage(prompt),

@@ -4,21 +4,13 @@ import { Page } from "../../globals";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import UserInputBottom from "@/components/ui-ux/chat-common/UserInputBottom";
 import useChatTranslate from "@/hooks/useChatTranslate";
-import TranslateSidebar from "@/components/ui-ux/translation-agent/TranslateSidebar";
-import TranslateDisplayBlock from "@/components/ui-ux/translation-agent/TranslateDisplayBlock";
-
-const languages = [
-  { id: "hindi", title: "Hindi", country: "India" },
-  { id: "bengali", title: "Bengali", country: "Bangladesh" },
-  { id: "urdu", title: "Urdu", country: "Pakistan" },
-  { id: "chinese", title: "Chinese", country: "China" },
-  { id: "tagalog", title: "Tagalog", country: "Philippines" },
-];
+import TranslateSidebar from "@/components/ui-ux/translation-assistant/TranslateSidebar";
+import TranslateDisplayBlock from "@/components/ui-ux/translation-assistant/TranslateDisplayBlock";
+import { useTranslateLangs } from "@/contexts/TranslateContext";
 
 const TranslateGPTContent = () => {
-  const [outputLang, setOutputLang] = useState<string>(languages[0].title);
-
-  let inputLang = "English";
+  const { inputLang, outputLang, outputLangs, setOutputLang } =
+    useTranslateLangs();
 
   const { chatMessages, isLoading, submitMessage, setChatMessages } =
     useChatTranslate("/api/moose-chat-translate");
@@ -36,11 +28,7 @@ const TranslateGPTContent = () => {
       <Page className={""} FULL={true} customYMargin="my-0">
         <div className="flex">
           {/* Left Sidebar Column */}
-          <TranslateSidebar
-            languages={languages}
-            setOutputLang={setOutputLang}
-            setChatMessages={setChatMessages}
-          />
+          <TranslateSidebar setChatMessages={setChatMessages} />
           {/* Left Sidebar Column ENDS*/}
 
           {/* Right Content Column */}

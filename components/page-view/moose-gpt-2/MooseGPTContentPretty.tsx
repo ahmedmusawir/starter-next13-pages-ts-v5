@@ -3,13 +3,13 @@ import React from "react";
 import { Page } from "../../globals";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import Spinner from "@/components/ui-ux/common/Spinner";
-import useChatSubmit from "@/hooks/useChatSubmit";
+import useChatStreaming from "@/hooks/useChatStreaming";
 import ChatMessage from "@/components/ui-ux/moose-gpt-2/ChatMessage";
 import UserInputBottom from "@/components/ui-ux/moose-gpt-2/UserInputBottom";
 
 const MooseGPTContentPretty = () => {
   const { chatMessages, isLoading, submitMessage, setChatMessages } =
-    useChatSubmit("/api/moose-chat");
+    useChatStreaming("/api/moose-chat");
   // Function to handle the form submission
   const handleChatSubmit = async (userInput: string) => {
     submitMessage(userInput);

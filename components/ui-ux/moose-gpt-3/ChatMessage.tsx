@@ -1,19 +1,15 @@
 import { FaRobot, FaUserCircle } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import { CodeComponent } from "react-markdown/lib/ast-to-react";
-import styles from "./ChatMessage.module.scss";
 import CopyButton from "./CopyButton";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { CSSProperties } from "react";
 import { dark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import styles from "./ChatMessage.module.scss";
 
 interface Props {
   isUser: boolean;
   message: string;
-}
-
-interface CodeBlockProps {
-  value: string;
 }
 
 const customStyle: Record<string, CSSProperties> = {
@@ -23,7 +19,6 @@ const customStyle: Record<string, CSSProperties> = {
     fontSize: "1.25rem",
     lineHeight: "1.5",
   },
-  // You can add more specific selectors and styles as needed
 };
 
 // Custom renderer for the code block
@@ -60,7 +55,6 @@ const ChatMessage = ({ isUser, message }: Props) => {
       <Icon className={`flex-shrink-0 h-8 w-8 ${isUser ? "mr-4" : "ml-4"}`} />
       <div className={`mb-8 rounded-lg flex-grow ${messageStyles}`}>
         <section className={styles.messageContainer}>
-          {/* <pre> */}
           <ReactMarkdown
             components={{
               code: CodeBlock,
@@ -68,7 +62,6 @@ const ChatMessage = ({ isUser, message }: Props) => {
           >
             {message}
           </ReactMarkdown>
-          {/* </pre> */}
         </section>
       </div>
     </div>

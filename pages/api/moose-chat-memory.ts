@@ -18,8 +18,8 @@ export default async function handler(
   // Create a new instance of the OpenAI model
   const model = new ChatOpenAI({
     temperature: 0.5,
-    // modelName: "gpt-3.5-turbo",
-    modelName: "gpt-4-1106-preview", //[GPT4],
+    modelName: "gpt-3.5-turbo-16k",
+    // modelName: "gpt-4-1106-preview",
     streaming: true,
     callbacks: [
       {

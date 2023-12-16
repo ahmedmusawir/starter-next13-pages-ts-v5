@@ -1,14 +1,12 @@
-import { Language } from "@/global-interfaces";
+import { useTranslateLangs } from "@/contexts/TranslateContext";
 import { ChangeEvent } from "react";
 
-interface Props {
-  languages: Language[];
-  setOutputLang: React.Dispatch<React.SetStateAction<string>>;
-}
-
-const TranslateRadioBlock = ({ languages, setOutputLang }: Props) => {
+const TranslateRadioBlock = () => {
+  const { outputLangs, setOutputLang } = useTranslateLangs();
   const handleLanguageChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const selectedLang = languages.find((lang) => lang.id === event.target.id);
+    const selectedLang = outputLangs.find(
+      (lang) => lang.id === event.target.id
+    );
     if (selectedLang) {
       setOutputLang(selectedLang.title);
     }
@@ -25,7 +23,7 @@ const TranslateRadioBlock = ({ languages, setOutputLang }: Props) => {
       <fieldset className="mt-4">
         <legend className="sr-only">Notification method</legend>
         <div className="space-y-4">
-          {languages.map((lang, index) => (
+          {outputLangs.map((lang, index) => (
             <div key={lang.id} className="flex items-center">
               <input
                 id={lang.id}
