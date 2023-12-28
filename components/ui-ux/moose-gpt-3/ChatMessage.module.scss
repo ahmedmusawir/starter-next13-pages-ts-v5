@@ -5,9 +5,9 @@
   overflow-wrap: break-word;
 
   p {
-    // padding-top: 0.75rem;
-    // padding-bottom: 0.75rem;
-    padding: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding: 0rem 2rem;
     font-size: 1.25rem;
   }
 
@@ -29,22 +29,18 @@
     }
   }
 
-  .copyButton {
-    position: absolute;
-    top: 122px; // Adjust as needed
-    right: 25px; // Adjust as needed
-    padding: 0.5rem 0.5rem;
-    background-color: gray;
-  }
-
   .codeBlock {
+    position: relative;
     max-width: 100%; // Ensures the block doesn't exceed its container
     overflow-x: auto; // Allows horizontal scrolling for overflow content
     word-wrap: break-word; // Breaks long words to prevent overflow
 
-    pre {
-      white-space: pre-wrap; // Wraps the content within the block
-      // ... other styles
+    .copyButton {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      padding: 0.5rem 0.5rem;
+      background-color: gray;
     }
   }
 }

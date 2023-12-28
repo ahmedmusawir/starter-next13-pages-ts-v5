@@ -65,7 +65,7 @@ const MooseGPTContentPretty = () => {
               </div>
 
               {/* User input Block */}
-              <div className=" bg-gray-200 h-21 flex justify-center items-center">
+              <div className="bg-gray-200 h-21 flex justify-center items-center">
                 <UserInputBottom onSubmit={handleChatSubmit} />
               </div>
             </section>

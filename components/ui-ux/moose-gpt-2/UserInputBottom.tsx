@@ -1,4 +1,4 @@
-import { BarsArrowUpIcon, UsersIcon } from "@heroicons/react/20/solid";
+import { BarsArrowUpIcon } from "@heroicons/react/20/solid";
 import { FormEvent, useState } from "react";
 
 interface Props {

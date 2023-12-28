@@ -1,5 +1,5 @@
 import { Message } from "@/global-interfaces";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const useChatStreaming = (apiEndpoint: string) => {
   const [chatMessages, setChatMessages] = useState<Message[]>([]);

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useState } from "react";
+import React from "react";
 import { Page } from "../../globals";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import UserInputBottom from "@/components/ui-ux/chat-common/UserInputBottom";
@@ -9,9 +9,9 @@ import TranslateDisplayBlock from "@/components/ui-ux/translation-assistant/Tran
 import { useTranslateLangs } from "@/contexts/TranslateContext";
 
 const TranslateGPTContent = () => {
-  const { inputLang, outputLang, outputLangs, setOutputLang } =
-    useTranslateLangs();
-
+  // Context Hook
+  const { inputLang, outputLang } = useTranslateLangs();
+  // Output Streaming Hook
   const { chatMessages, isLoading, submitMessage, setChatMessages } =
     useChatTranslate("/api/moose-chat-translate");
   // Function to handle the form submission
@@ -38,7 +38,7 @@ const TranslateGPTContent = () => {
               {/* Top Chat Block */}
               <div className="flex items-center h-14">
                 <ArrowLeftIcon className="mr-2 h-6 w-6 text-gray-600" />
-                <h1 className="text-xl font-bold">MooseGPT v4 Translate</h1>
+                <h1 className="text-xl font-bold">MooseGPT Translate</h1>
               </div>
 
               {/* Main Chat Display Block */}

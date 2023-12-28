@@ -1,14 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { ChatOpenAI } from "langchain/chat_models/openai";
 import { UpstashRedisChatMessageHistory } from "langchain/stores/message/upstash_redis";
-import {
-  SystemMessagePromptTemplate,
-  HumanMessagePromptTemplate,
-  ChatPromptTemplate,
-  MessagesPlaceholder,
-} from "langchain/prompts";
 import { ConversationChain } from "langchain/chains";
 import { BufferMemory } from "langchain/memory";
+import openAiService from "@/services/openAiService";
 
 export default async function handler(
   req: NextApiRequest,
@@ -16,19 +10,7 @@ export default async function handler(
 ) {
   const { prompt } = req.body;
   // Create a new instance of the OpenAI model
-  const model = new ChatOpenAI({
-    temperature: 0.5,
-    modelName: "gpt-3.5-turbo-16k",
-    // modelName: "gpt-4-1106-preview",
-    streaming: true,
-    callbacks: [
-      {
-        handleLLMNewToken(token) {
-          res.write(token);
-        },
-      },
-    ],
-  });
+  const model = openAiService(res, 0.5, "gpt-3.5-turbo-16k");
 
   const memory = new BufferMemory({
     chatHistory: new UpstashRedisChatMessageHistory({
@@ -39,14 +21,6 @@ export default async function handler(
       },
     }),
   });
-
-  const chatPrompt = ChatPromptTemplate.fromMessages([
-    SystemMessagePromptTemplate.fromTemplate(
-      "The following is a friendly conversation between a human and AI. The AI is talkative and provides lots of specific details from it's context. If the AI doesn't know the answer to a question, it truthfully says it doesn't know."
-    ),
-    new MessagesPlaceholder("chat_history"),
-    HumanMessagePromptTemplate.fromTemplate("{input}"),
-  ]);
 
   const chain = new ConversationChain({
     llm: model,

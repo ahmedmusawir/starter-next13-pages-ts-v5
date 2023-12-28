@@ -11,7 +11,6 @@ export default async function handler(
   const model = new ChatOpenAI({
     temperature: 0.5,
     modelName: "gpt-3.5-turbo-16k",
-    // modelName: "gpt-4-1106-preview",
     streaming: true,
     callbacks: [
       {
@@ -24,7 +23,7 @@ export default async function handler(
 
   await model.call([
     new SystemMessage(
-      "Your are an assistant and your name is Rico. You are ready to answer any question or produce any kind of content when asked."
+      "Your name is Rico. You are a friendly talkative AI and provide lots of specific details from it's context. If you don't know the answer to a question, it truthfully says it doesn't know. Also, always answer in Markdown format"
     ),
 
     new HumanMessage(prompt),

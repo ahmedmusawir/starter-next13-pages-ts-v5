@@ -12,16 +12,12 @@ interface Props {
   message: string;
 }
 
-interface CodeBlockProps {
-  value: string;
-}
-
 const customStyle: Record<string, CSSProperties> = {
   ...dark,
   'code[class*="language-"]': {
     // Styles for code elements
-    // fontSize: "1.25rem",
-    // lineHeight: "1.5",
+    fontSize: "1.25rem",
+    lineHeight: "1.5",
   },
   // You can add more specific selectors and styles as needed
 };
@@ -58,7 +54,7 @@ const ChatMessage = ({ isUser, message }: Props) => {
   return (
     <div className={`flex ${iconStyles} my-5`}>
       <Icon className={`flex-shrink-0 h-8 w-8 ${isUser ? "mr-4" : "ml-4"}`} />
-      <div className={`mb-8 rounded-lg flex-grow ${messageStyles}`}>
+      <div className={`mb-8 py-5 rounded-lg flex-grow ${messageStyles}`}>
         <section className={styles.messageContainer}>
           {/* <pre> */}
           <ReactMarkdown

@@ -35,7 +35,7 @@ const TranslateRadioBlock = () => {
               />
               <label
                 htmlFor={lang.id}
-                className="ml-3 block text-sm font-medium leading-6 text-gray-900"
+                className="ml-3 block text-lg font-medium leading-6 text-gray-900"
               >
                 {lang.title} ({lang.country})
               </label>

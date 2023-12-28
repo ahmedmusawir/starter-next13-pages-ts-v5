@@ -29,7 +29,7 @@ const UserInputBottom = ({ onSubmit }: Props) => {
         />
         <button
           type="submit"
-          className="flex items-center justify-center rounded-r-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300 py-5"
+          className="flex items-center justify-center rounded-r-md bg-blue-500 px-4 text-white hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300 py-5"
           aria-label="Send"
         >
           <BarsArrowUpIcon className="h-5 w-5" aria-hidden="true" />

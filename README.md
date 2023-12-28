@@ -1,8 +1,8 @@
 # starter-next13-pages-ts-v5
 
-## Adding Radix UI and Theme to it with Light/Dark feature and Responsive Layout
+## Adding Radix UI and Theme + Langchain.js + OpenAI Projects
 
-Next.js 13 Starter kit with pages dir w/ Typescript + Food Blog(Strapi v4) + Redux . App router is not used due to it's experimental nature. Tailwind + Ecom + Redux Toolkit + some fixes
+Next.js 13 Starter kit with pages directory w/ Typescript + Food Blog(Strapi v4) + Redux . App router is not used due to it's experimental nature. Tailwind + Ecom + Redux Toolkit + some fixes
 
 - Strapi Auth will be converted from Context API to Redux
 - Food Blog

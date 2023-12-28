@@ -6,48 +6,12 @@ import CopyButton from "./CopyButton";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { CSSProperties } from "react";
 import { dark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { CodeBlock } from "@/utils/moose-gpt-utils";
 
 interface Props {
   isUser: boolean;
   message: string;
 }
-
-interface CodeBlockProps {
-  value: string;
-}
-
-const customStyle: Record<string, CSSProperties> = {
-  ...dark,
-  'code[class*="language-"]': {
-    // Styles for code elements
-    fontSize: "1.25rem",
-    lineHeight: "1.5",
-  },
-  // You can add more specific selectors and styles as needed
-};
-
-// Custom renderer for the code block
-const CodeBlock: CodeComponent = ({
-  node,
-  inline,
-  className,
-  children,
-  ...props
-}) => {
-  const match = /language-(\w+)/.exec(className || "");
-  return !inline && match ? (
-    <div className={styles.codeBlock}>
-      <SyntaxHighlighter style={customStyle} language={match[1]} PreTag="div">
-        {String(children).replace(/\n$/, "")}
-      </SyntaxHighlighter>
-      <CopyButton textToCopy={String(children)} />
-    </div>
-  ) : (
-    <code className={className} {...props}>
-      {children}
-    </code>
-  );
-};
 
 const ChatMessage = ({ isUser, message }: Props) => {
   // Apply different styles based on the speaker
