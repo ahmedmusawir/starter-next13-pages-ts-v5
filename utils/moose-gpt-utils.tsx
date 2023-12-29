@@ -4,6 +4,7 @@ import { CSSProperties } from "react";
 import { dark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import CopyButton from "@/components/ui-ux/moose-gpt-3/CopyButton";
 import styles from "@/components/ui-ux/moose-gpt-3/ChatMessage.module.scss";
+
 export const customStyle: Record<string, CSSProperties> = {
   ...dark,
   'code[class*="language-"]': {

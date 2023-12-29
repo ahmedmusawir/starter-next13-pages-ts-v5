@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Row } from "../../ui-ux";
 import Head from "next/head";
 import { Page } from "../../globals";
+import Row from "@/components/ui-ux/common/Row";
 
 const DemoContentCopyMe = () => {
   return (

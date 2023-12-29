@@ -1,5 +1,4 @@
 import React from "react";
-import { Box, Row } from "../../ui-ux";
 import Head from "next/head";
 import { Page } from "../../globals";
 import SignupForm from "../../forms/SignupForm";

@@ -1,6 +1,6 @@
 import React from "react";
-import { Row } from "../ui-ux";
 import Link from "next/link";
+import Row from "../ui-ux/common/Row";
 
 interface Props {
   contentName: string;

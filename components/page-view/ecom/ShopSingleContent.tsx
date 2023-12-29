@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React from "react";
-import { Row } from "../../ui-ux";
 import { Page } from "../../globals";
 import { useRouter } from "next/router";
 import { useProducts } from "@/contexts/ProductContext";

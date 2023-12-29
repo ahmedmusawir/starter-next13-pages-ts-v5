@@ -10,14 +10,14 @@ import BlogPostList from "../../list-view/BlogPostList";
 import JobSortForm from "../../forms/JobSortForm";
 import SearchForm from "../../forms/SearchForm";
 import { Page } from "../../globals";
-import SidebarDesktop from "../../ui-ux/SidebarDesktop";
-import SidebarNav from "../../ui-ux/SidebarNav";
 import {
   apiPosts, // THIS IS NEEDED TO CLEAR CACHE CODE. DON'T REMOVE
   useGetPostsQuery,
   useLazyGetPostsQuery,
 } from "@/features/posts/apiPosts";
 import Spinner from "../../ui-ux/common/Spinner";
+import SidebarNav from "@/components/ui-ux/common/SidebarNav";
+import SidebarDesktop from "@/components/ui-ux/common/SidebarDesktop";
 
 const BlogPageContent = ({
   initialPosts,

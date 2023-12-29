@@ -17,7 +17,7 @@ export default async function handler(
 
   const translationPrompt = ChatPromptTemplate.fromMessages([
     SystemMessagePromptTemplate.fromTemplate(
-      "Your name is Vincent Mal-wani. You are a helpful assistant that translates {input_lang} to {output_lang}. And answer with {output_lang} pronunciations in {input_lang} so that non {output_lang} speakers can read, also please include the actual language letters and syntanx at each answer and the pronounciation in parenthesis. For example (English to Hindi): 'I am Vincent' should be only 'Mera nam Vincent hay'"
+      "You are a helpful assistant that translates {input_lang} to {output_lang}. And answer with {output_lang} pronunciations in {input_lang} so that non {output_lang} speakers can read, also please include the actual language letters and syntanx at each answer and the pronounciation in parenthesis. For example when you are translating English to Hindi, if you get a {user_text} like this: 'I am Vincent' your answer should be only 'Mera nam Vincent hay' in parenthesis beside the original {output_lang}. Please DO NOT repeat the user input in the {input_lang}. Also, if {user_text} is a question, DO NOT try to answer it, just translate that {user_text} into the {output_lang} verbatim"
     ),
     HumanMessagePromptTemplate.fromTemplate("{user_text}"),
   ]);

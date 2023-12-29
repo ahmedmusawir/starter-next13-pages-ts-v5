@@ -1,7 +1,12 @@
-import { CodeBlock } from "@/utils/moose-gpt-utils";
 import { FaRobot, FaUserCircle } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
+import { CodeComponent } from "react-markdown/lib/ast-to-react";
 import styles from "./ChatMessage.module.scss";
+import CopyButton from "./CopyButton";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { CSSProperties } from "react";
+import { dark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { CodeBlock } from "@/utils/moose-gpt-utils";
 
 interface Props {
   isUser: boolean;
